@@ -1,0 +1,319 @@
+
+body {
+     font-family: Arial, sans-serif;
+     background-color: #ffffff;
+     padding: 0;
+     margin: 0;
+ }
+
+
+.main-navbar {
+     background-color: #444;
+     text-align: center;  
+     width: 100%;
+     position: fixed;
+     font-size: 15px;
+}
+
+.main-navbar a {
+     display: inline-block;
+     color: #d6d2d2;
+     text-align: center;
+     padding:  19px 14px;
+     text-decoration: none;
+}
+
+.main-navbar a:hover {
+     background-color: #cdcbcb;
+     color: #000000;
+}
+
+.poster{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     gap: 0.5rem;
+}
+
+.resume{
+     float: right;
+     font-size: 15px;   
+}
+.main{
+     width: 85%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 0;
+     background-color: #cdcbcb;
+     margin-top: 45px;
+     padding: 10px;
+     border-radius: 10px;
+     box-shadow: 10px 10px 10px #817a7a;
+}
+
+.title{
+     font-size: 15px;
+     font-weight: bold;
+     text-align: right;
+}
+
+.outer{
+     height: auto;
+     justify-content: center;
+     align-items: center;
+     gap: 0.5rem;
+}
+
+#profile{
+     width: 75%;
+}
+
+.mainabout{
+     width: 85%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin-top: 15px;
+     padding: 10px;
+     border-radius: 15px;
+     background-color: #cdcbcb;
+}
+
+.qualifications{
+     width: 85%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin-top: 15px;
+     padding: 10px;
+     border-radius: 15px;
+     background-color: #cdcbcb;
+}
+.secondary-navbar {
+     background-color: #444;
+     text-align: center;  
+     width: 100%;
+     font-size: 15px;
+     border-radius: 15px;
+}
+.secondary-navbar a {
+     display: inline-block;
+     color: #d6d2d2;
+     text-align: center;
+     padding:  15px 10px;
+     text-decoration: none;
+}
+.secondary-navbar a:hover {
+     background-color: #cdcbcb;
+     color: #000000;
+}
+
+
+
+.tech{
+     width: 100%;
+     display: flex;
+     justify-content: left;
+     align-items: left;
+     margin-top: 15px;
+     padding: 10px;
+     border-radius: 15px;
+     background-color: #cdcbcb;
+     flex-direction: column;
+     flex-wrap: wrap;
+     gap: 2px;
+}
+
+.skills{
+     display: flex;
+     justify-content: start;
+     align-items: center;
+     gap: 0;
+     flex-wrap: wrap;
+}
+
+.tech-box{
+     width: 120px;
+     height: 120px;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     margin: 0;
+     padding: 0;
+     gap: 0;
+     background-color: #cdcbcb;
+     border-radius: 15px;   
+}
+
+.tech-box:hover{
+     background-color: #c5ce86;
+
+}
+
+img{
+     width: 80px;
+     object-fit: cover;
+}
+
+.projects {
+     width: 85%;
+     background-color: #cdcbcb;
+     margin-top: 15px;
+     padding: 20px;
+     border-radius: 15px;
+}
+
+.project-box1{
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 0;
+     gap: 3rem;
+}
+
+.project-box2{
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 0;
+     gap: 3rem;
+}
+
+
+.project{
+     width: 100%;
+     height: auto;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 0;
+     padding: 0;
+}
+
+.project-image{
+     width: 60%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     flex-wrap: wrap;
+     font-size: 14px;
+     border-radius: 10px;
+}
+
+.project:hover{
+     background-color: #444;
+}
+
+.project-image img{
+     margin: 8px;
+     width: 60%;
+     justify-content: center;
+     align-items: center;
+     object-fit: cover;
+     border-radius: 10px;
+}
+
+.contact{
+     width: 85%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin-top: 15px;
+     padding: 10px;
+     border-radius: 15px;
+     background-color: #cdcbcb;
+}
+
+.social-media{
+     width: 85%;
+     display: flex;
+     gap: 1rem;
+     justify-content: center;
+     align-items: center;
+     margin: 15px;
+     padding: 15px;
+     border-radius: 15px;
+     background-color: #cdcbcb;
+}
+
+i{
+     font-size: 25px;
+     color: #333;
+}
+
+#insta:hover{
+     color: #d41b1b;
+}
+#x:hover{
+     color: rgb(2, 2, 2);
+    
+}
+#github:hover{
+     color: #000000;
+}
+#linkedin:hover{
+     color: #0d4b67;
+}
+#facebook:hover{
+     color: #4035d7;
+}
+
+
+form {
+     margin-top: 45px;
+     margin-bottom: 55px;
+   }
+   
+   .feedback-input {
+     color: rgb(0, 0, 0);
+     font-weight: 500;
+     font-size: 18px;
+     border-radius: 5px;
+     line-height: 22px;
+     background-color: #faf9f9;
+     border: 2px solid #444;
+     transition: all 0.3s;
+     padding: 13px;
+     margin-bottom: 15px;
+     width: 100%;
+     box-sizing: border-box;
+     outline: 0;
+   }
+   
+   .feedback-input:focus {
+     border: 2px solid #444;
+   }
+   
+   textarea {
+     height: 150px;
+     line-height: 150%;
+     resize: vertical;
+   }
+   
+   [type="submit"] {
+     width: 100%;
+     background: #444;
+     border-radius: 5px;
+     border: 0;
+     cursor: pointer;
+     color: rgb(2, 2, 2);
+     font-size: 24px;
+     padding-top: 10px;
+     padding-bottom: 10px;
+     transition: all 0.3s;
+     margin-top: -4px;
+     font-weight: 700;
+   }
+   [type="submit"]:hover {
+     background: #fbfbfb;
+   }
