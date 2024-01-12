@@ -37,11 +37,13 @@ body {
 
 .resume{
      float: right;
-     font-size: 15px; 
+     font-size: 10px; 
      display:flex;
 }
+
 .resume i{
      margin-top: 11px;
+     font-size: 17px;
 }
 .main{
      width: 85%;
