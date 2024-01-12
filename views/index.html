@@ -4,55 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="/public/style.css">
+    <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
      <nav class="main-navbar">
-          <a href="/bout" onclick="scrollFunction('about')">About</a>
-          <a href="" onclick="scrollFunction('qualifications')">Qualifications</a>
+          <a href="#" onclick="scrollFunction('about')">About</a>
+          <a href="#" onclick="scrollFunction('qualifications')">Qualifications</a>
           <a href="#" onclick="scrollFunction('projects')">Projects</a>
           <a href="#" onclick="scrollFunction('contact')">Contact</a>
      </nav>
 
      <div class="poster" id="about">
           <div class="main">
-
                <div class="title">
                     <h3>Satyam Kumar</h3>
                     <h4><u>Backend Developer | Web Developer </u></h4>
+                    <div>
+                         <a href="https://www.instagram.com/_satyam_kasaudhan_/" ><i class="fa-brands fa-instagram"  id="insta"></i></a>
+                         <a href="https://twitter.com/satyamkumar279" ><i class="fa-brands fa-x-twitter"  id="x"></i></a>
+                         <a href="https://github.com/Satyam2016" ><i class="fa-brands fa-github"  id="github"></i></a>
+                         <a href="https://www.linkedin.com/in/satyam-kumar-7361661b3/" ><i class="fa-brands fa-linkedin"  id="linkedin"></i></a>
+                    </div>
+                    <div class="resume">
+                         <br>
+                         <h4>Resume</h3>
+                        <a href=""><i class="fa-solid fa-file"></i></a>
+                    </div>
                </div>
 
                <div class="outerlayer">
-                    <img src="/public/pics/new1.png" alt="" id="profile">
+                    <img src="/pics/new1.png" alt="" id="profile">
                </div>
 
           </div>
 
           <div class="mainabout" id="mainabout">
                     <h1>ABOUT</h1>
-                    <p>Hi, I am Satyam Kumar, a 2nd year student at SRM University, AP. I am a backend developer and a web developer. I have worked on various projects and have a good knowledge of various technologies. I am a quick learner and a team player. I am looking for an internship in the field of software development.</p>
+                    <p>Hi, I am Satyam Kumar, a 2nd year student at SRM University, AP. I am a backend developer and a web developer. I have a good knowledge of various technologies. I am a quick learner and a team player. I am looking for an internship in the field of software development.</p>
           </div>
           
           <div class="qualifications" id="qualifications">
                <h1>Qualifications</h1>
                <nav class="secondary-navbar">
-                    <a href="/education">Education</a>
-                    <a href="/tech-skills">Tech-Skills</a>
-                    <a href="/participations">Participation</a>
+                    <a href="/education" onclick="scrollFunction('qualifications')">Education</a>
+                    <a href="/tech-skills" onclick="scrollFunction('qualifications')">Tech-Skills</a>
+                    <a href="/participations" onclick="scrollFunction('qualifications')">Participation</a>
                </nav>
+               <% if(locals.education) {%>
+                    <%- include("education.ejs") %>
+               <% } %>
 
-               
+               <% if(locals.skills) {%>
+                    <%- include('skills.ejs') %>
+                    <script>
+                         window.onload = function() {           
+                              scrollFunction('qualifications');}
+                    </script>
+               <% } %>
+
+               <% if(locals.participations) {%>
+                    <%- include('participation.ejs') %>
+                    <script>
+                         window.onload = function() {           
+                              scrollFunction('qualifications');}
+                    </script>
+               <% } %>
 
           </div>
           
           <div class="projects" id="projects">
-               <h1 style="text-align: center;">PROJECTS</h1> 
+               <h1 style="text-align: center;">PROJECTS</h1>
                <div class="project-box1">
                     <div class="project">
                          <div class="project-image">
-                              <img  src="/public/pics/chargedup.jpg" alt="">
+                              <img  src="/pics/chargedup.jpg" alt="">
                          
                               <h3>Charged-Up</h3>
                               <p>Charged-up is a gym website that guides the conscious people who want to maintain their body. It tells about the correct postition and posture of each exercise and shows the most efficient manner of performing it</p>
@@ -61,7 +88,7 @@
               
                     <div class="project">
                          <div class="project-image">
-                              <img   src="/public/pics/system_health.png" alt="">
+                              <img   src="/pics/system_health.png" alt="">
                               
                               <h3>System-monitoring</h3>
                               <p>This project uses bash scripting that monitors various aspect of UNIX or LINUX, and generates regular reports and sends alert when certain condition are met</p>
@@ -74,7 +101,7 @@
 
                     <div class="project">
                          <div class="project-image">
-                              <img src="/public/pics/sql_scanner.png" alt="">
+                              <img src="/pics/sql_scanner.png" alt="">
                          
                               <h3>SQL-Injectio Scanner</h3>
                               <p>This project involves developing a basic SQL injection vulnerability scanner that can be used to test the security of web applications</p>
@@ -83,7 +110,7 @@
 
                     <div class="project">
                          <div class="project-image">
-                              <img src="/public/pics/travel_tracker.png" alt="">
+                              <img src="/pics/travel_tracker.png" alt="">
                          
                               <h3>Travel-Tracker</h3>
                               <p>This project keeps track of countries travelled by the user by spotting on the world map</p>
@@ -91,7 +118,7 @@
                     </div>
                </div>
           </div>
-          
+
           <div class="contact" id="contact">
                <h1 style="text-align: center;">Contact Me</h1>
                     <form>
@@ -99,19 +126,24 @@
                          <input name="email" type="text" class="feedback-input" placeholder="Email" />
                          <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
                          <input type="submit" value="SUBMIT" />
+               
                     </form>
           </div>
 
           <div class="social-media" >
-               <div><i class="fa-brands fa-instagram" herf=""  id="insta"></i></div>
-               <div><i class="fa-brands fa-x-twitter" herf="" id="x"></i></div>
-               <div><i class="fa-brands fa-github" herf="" id="github"></i></div>
-               <div><i class="fa-brands fa-linkedin" herf="" id="linkedin"></i></div>
-               <div><i class="fa-brands fa-facebook" herf="" id="facebook"></i></div>
-               <div><i class="fa-solid fa-phone" herf="" id="phone"></i>8090723237</div>
+               <a href="https://www.instagram.com/_satyam_kasaudhan_/" ><i class="fa-brands fa-instagram"  id="insta"></i></a>
+               <a href="https://twitter.com/satyamkumar279" ><i class="fa-brands fa-x-twitter"  id="x"></i></a>
+               <a href="https://github.com/Satyam2016" ><i class="fa-brands fa-github"  id="github"></i></a>
+               <a href="https://www.linkedin.com/in/satyam-kumar-7361661b3/" ><i class="fa-brands fa-linkedin"  id="linkedin"></i></a>
+               <i class="fa-solid fa-phone" href="" id="phone"></i>
           </div>
 
      </div>
 </body>
-<script src="/script.js"> </script>
+<script >
+     async function scrollFunction(id){
+     var element = document.getElementById(id);
+     element.scrollIntoView({behavior: "smooth"});
+     };
+</script>
 </html>
